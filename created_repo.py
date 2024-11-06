@@ -29,7 +29,7 @@ class repo_created_monitoring:
                 url = None
         workbook = Workbook()
         sheet = workbook.active
-        header = ["Nome", "Descrição", "URL do Repositório","Projeto","Data de Criação", "Último Push"]
+        header = ["name", "description", "url","project","created", "last udpate"]
         sheet.append(header)
         data_corte = datetime.strptime(self.created, '%d/%m/%Y')
         data_corte = data_corte.replace(tzinfo=pytz.UTC)
